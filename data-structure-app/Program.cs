@@ -13,6 +13,9 @@
                 dataStructireListParameter = parameter.Substring(4).Split(",");
             }
 
+            if (dataStructireListParameter is null || dataStructireListParameter.Any(w => "binarytree".Contains(w.ToLower())))
+                dataStructureFactory.Create<BinaryTree>();
+
             if (dataStructireListParameter is null || dataStructireListParameter.Any(w => "hashtable".Contains(w.ToLower())))
                 dataStructureFactory.Create<HashTable>();
 
